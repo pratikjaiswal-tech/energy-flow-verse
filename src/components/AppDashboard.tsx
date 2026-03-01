@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion';
-import { ArrowLeft, Wallet } from 'lucide-react';
+import { ArrowLeft, Wallet, Users } from 'lucide-react';
+import { Link } from 'react-router-dom';
 import { useBlockchain } from '@/context/BlockchainContext';
 import RoleSelector from './RoleSelector';
 import SimulationToggle from './SimulationToggle';
@@ -31,6 +32,9 @@ export default function AppDashboard({ onBack }: Props) {
           </div>
 
           <div className="flex items-center gap-4">
+            <Link to="/community" className="btn-web3 text-xs px-3 py-1.5 flex items-center gap-1.5">
+              <Users className="w-3.5 h-3.5" /> Community
+            </Link>
             <SimulationToggle />
             <div className="glass-card px-3 py-1.5 flex items-center gap-2 text-xs font-mono">
               <Wallet className="w-3.5 h-3.5 text-secondary" />
